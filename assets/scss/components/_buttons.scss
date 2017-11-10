@@ -1,0 +1,13 @@
+.cartbtn {
+  background: $brand;
+  border: 0;
+  font-size: 14px;
+  padding: 16px 23px;
+  color: $white;
+  transition: background-color $transition;
+  &:hover {
+    cursor: pointer;
+    background: darken($brand, 10%);
+    transition: background-color $transition;
+  }
+}

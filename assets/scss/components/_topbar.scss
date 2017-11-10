@@ -1,0 +1,13 @@
+.topbar {
+  background-color: $darkGray;
+  width: 100%;
+  float: left;
+
+  ul {
+    text-align: right;
+    li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}

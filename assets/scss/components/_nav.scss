@@ -1,0 +1,86 @@
+.header {
+  height:100px;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #fafafa;
+  .logo {
+    padding: 40px 0;
+  }
+
+  nav {
+    margin-left: 15px;
+    width: 100%;
+  }
+
+  .main-nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100px;
+    text-transform: uppercase;
+    width: 100%;
+    > li {
+      margin-left: 15px;
+      position: relative;
+    }
+
+
+    .dropdown {
+      position: absolute;
+      background-color: $white;
+      box-shadow: -1px 3px 10px #d6d6d6;
+      display: flex;
+      padding: 15px;
+      top: 30px;
+      right: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $transition, visibility $transition, top $transition;
+      a {
+        color: $titleColor;
+        background-image: none;
+      }
+      ul {
+        .nav-group-title {
+          font-weight: bold;
+        }
+        li {
+          margin: 20px 0;
+          font-size: 13px;
+          width: 160px;
+          a {
+            text-transform: capitalize;
+          }
+        }
+      }
+      &:hover {
+        visibility: visible;
+        opacity: 1;
+        top: 50px;
+      }
+    }
+
+    .menu-item > a {
+      background-image: url('data:image/svg+xml, <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.95 14.9"><title>if_arrow-down-01_186411</title><path d="M14.8,23.85l-9.6-9.6a2.23,2.23,0,0,1,0-3.2l.8-.8a2.23,2.23,0,0,1,3.2,0l7.3,7.3,7.3-7.3a2.23,2.23,0,0,1,3.2,0l.8.8a2.23,2.23,0,0,1,0,3.2l-9.6,9.6a1.92,1.92,0,0,1-1.7.6A1.92,1.92,0,0,1,14.8,23.85Z" transform="translate(-4.52 -9.57)" style="fill:#515151"/></svg>');
+      padding: 41px 16px;
+      background-position: 16px 71px;
+      background-repeat: no-repeat;
+      background-size: 10px;
+      transition: color $transition;
+      &:hover {
+        color: $brand;
+        text-decoration: none;
+        transition: color $transition;
+        background-image: url('data:image/svg+xml, <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.95 14.9"><title>if_arrow-down-01_186411</title><path d="M14.8,23.85l-9.6-9.6a2.23,2.23,0,0,1,0-3.2l.8-.8a2.23,2.23,0,0,1,3.2,0l7.3,7.3,7.3-7.3a2.23,2.23,0,0,1,3.2,0l.8.8a2.23,2.23,0,0,1,0,3.2l-9.6,9.6a1.92,1.92,0,0,1-1.7.6A1.92,1.92,0,0,1,14.8,23.85Z" transform="translate(-4.52 -9.57)" style="fill:#00c8c8"/></svg>');
+      }
+      &:hover {
+        & + .dropdown {
+          visibility: visible;
+          opacity: 1;
+          top: 50px;
+          transition: opacity $transition, visibility $transition, top $transition;
+        }
+      }
+    }
+  }
+}
