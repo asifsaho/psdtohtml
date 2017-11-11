@@ -1,0 +1,42 @@
+.store {
+  width: 100%;
+  float: left;
+  .layout-flex {
+    width: 100%;
+    flex-wrap: wrap;
+    > div {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .product {
+    text-align: center;
+    position: relative;
+    background-color: #f8f8f8;
+    transition: box-shadow $transition;
+    &:hover {
+      box-shadow: 0px 0px 18px #cecece;
+      transition: box-shadow $transition;
+    }
+  }
+
+  .large-product {
+    width: 98%;
+    margin: 1%;
+  }
+
+  .small-product {
+    width: 48%;
+    margin: 1%;
+  }
+  
+  .price {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #9a9a9a;
+    z-index: 9;
+  }
+}

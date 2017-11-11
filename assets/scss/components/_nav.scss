@@ -30,24 +30,45 @@
       background-color: $white;
       box-shadow: -1px 3px 10px #d6d6d6;
       display: flex;
+      flex-wrap: wrap;
       padding: 15px;
       top: 30px;
       right: 0;
+      width: 300px;
       visibility: hidden;
       opacity: 0;
+      z-index: 99;
       transition: opacity $transition, visibility $transition, top $transition;
       a {
         color: $titleColor;
         background-image: none;
       }
+      .promotion {
+        width: 100%;
+        font-size: 30px;
+        line-height: 48px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 30px;
+        text-align: justify;
+        background-color: $darkGray;
+        color: $white;
+        strong {
+          font-weight: bold;
+        }
+      }
       ul {
+        flex: 1;
+        width: 50%;
         .nav-group-title {
           font-weight: bold;
         }
         li {
+          &:first-child {
+            margin-top: 0;
+          }
           margin: 20px 0;
           font-size: 13px;
-          width: 160px;
           a {
             text-transform: capitalize;
           }

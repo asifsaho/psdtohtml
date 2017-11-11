@@ -1,9 +1,9 @@
 ::selection {
-  background: #ffb7b7; /* WebKit/Blink Browsers */
+  background: lighten($brand, 20%); /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  background: #ffb7b7; /* Gecko Browsers */
+  background: lighten($brand, 10%); /* Gecko Browsers */
 }
 
 a {
@@ -12,4 +12,8 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+img {
+  max-width: 100%;
 }
